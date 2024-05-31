@@ -1,0 +1,92 @@
+@import './mixins';
+
+.header{
+    height: 100vh
+}
+
+.topbar{
+    padding: 20px 0;
+    @include display_center;
+    justify-content: space-between;
+
+}
+
+.topbar__left{
+    @include display_center;
+    gap: 0 16px;
+    .topbar__left--title{
+        font-size: 30px;
+        line-height: 28px;
+        font-weight: 700;
+
+        a{
+            color: #FFF;
+            text-decoration: none;
+        }
+    }
+}
+
+.topbar__right{
+    @include display_center;
+    gap: 0 24px;
+
+    .topbar__list{
+        @include display_center;
+        gap: 0 30px;
+        list-style: none;
+        .topbar__link{
+            text-decoration: none;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 28px;
+        }
+    }
+
+    .topbar__btns{
+        @include display_center;
+        gap: 0 24px;
+
+        button{
+            @extend %blue_btn;
+        }
+    }
+}
+
+
+
+.navbar{
+    padding-top: 25px;
+    @include display_center;
+    color: #FFF;
+
+    .navbar__left{
+        h3{
+            font-size: 40px;
+            line-height: 60px;
+            font-weight: 700;
+        }
+        p{
+            max-width: 458px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 28px;
+            margin: 18px 0 45px 0;
+        }
+        .navbar__btns{
+            @include display_center;
+            gap: 0 30px;
+            button{
+                @extend %blue_btn;
+            }
+            a{
+                @include display_center;
+                gap: 0 10px;
+                color: #02897A;
+                text-decoration: none;
+            }
+        }
+    }
+
+
+}
